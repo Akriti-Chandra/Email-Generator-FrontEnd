@@ -1,0 +1,32 @@
+<div class="container-fluid heading">Email Generator</div>
+<div class="container">
+  <table class="table table-striped">
+    <thead class="tableHeader">
+      <tr>
+        <th class="text-center">Name</th>
+        <th class="text-center">Email</th>
+        <th class="text-center">Appointment Date</th>
+        <th class="text-center">Interview Transcription</th>
+        <th class="text-center">Move Forward</th>
+        <th class="text-center">Action Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="" ><input type="text" [(ngModel)]="name"></td>
+        <td class="" ><input type="email" [(ngModel)]="email"></td>
+        <td class=""><input type="date" [(ngModel)]="appointment_date" ></td>
+        <td class="" ><input type="text" [(ngModel)]="interview_transcription"></td>
+        <td class="" >
+          <select [(ngModel)]="move_forward" (change)="sendEmail()" >
+              <option [ngValue]="false"selected>--Select One--</option>
+              <option  [ngValue]="true">move forward</option>
+        </select></td>
+        <td>
+          {{actionResult}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<router-outlet></router-outlet>
